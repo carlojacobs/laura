@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Laura Achterberg - Quiz</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  </head>
+  <body>
+    <div class="container">
+      <form method="POST" action="/quiz/submit">
+        <h2>Hoe goed pas jij bij Laura?</h2>
+        <hr>
+        <!-- Geordend -->
+        <div class="form-group row">
+          <label class="col-sm-4">Ik ben heel geordend</label> 
+          <div class="col-8">
+            <div class="custom-control custom-radio custom-control-inline">
+              <input name="quiz1" id="quiz1_0" type="radio" class="custom-control-input" value="oneens"> 
+              <label for="quiz1_0" class="custom-control-label">Oneens</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input name="quiz1" id="quiz1_1" type="radio" class="custom-control-input" value="weet niet"> 
+              <label for="quiz1_1" class="custom-control-label">Weet niet</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input name="quiz1" id="quiz1_2" type="radio" class="custom-control-input" value="eens"> 
+              <label for="quiz1_2" class="custom-control-label">Eens</label>
+            </div>
+          </div>
+        </div>
+        <!-- Vakantie -->
+        <div class="form-group row">
+          <label class="col-sm-4">Als ik op vakantie ga plan ik alles drie maanden van tevoren</label> 
+          <div class="col-8">
+            <div class="custom-control custom-radio custom-control-inline">
+              <input name="quiz2" id="quiz2_0" type="radio" class="custom-control-input" value="oneens"> 
+              <label for="quiz2_0" class="custom-control-label">Oneens</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input name="quiz2" id="quiz2_1" type="radio" class="custom-control-input" value="weet niet"> 
+              <label for="quiz2_1" class="custom-control-label">Weet niet</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input name="quiz2" id="quiz2_2" type="radio" class="custom-control-input" value="eens"> 
+              <label for="quiz2_2" class="custom-control-label">Eens</label>
+            </div>
+          </div>
+        </div>
+        <!-- Domme blondjes -->
+        <div class="form-group row">
+          <label class="col-sm-4">Ik houd van domme blondjes</label> 
+          <div class="col-8">
+            <div class="custom-control custom-radio custom-control-inline">
+              <input name="quiz3" id="quiz3_0" type="radio" class="custom-control-input" value="oneens"> 
+              <label for="quiz3_0" class="custom-control-label">Oneens</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input name="quiz3" id="quiz3_1" type="radio" class="custom-control-input" value="weet niet"> 
+              <label for="quiz3_1" class="custom-control-label">Weet niet</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input name="quiz3" id="quiz3_2" type="radio" class="custom-control-input" value="eens"> 
+              <label for="quiz3_2" class="custom-control-label">Eens</label>
+            </div>
+          </div>
+        </div>
+        <!-- Aanhankelijk -->
+        <div class="form-group row">
+          <label class="col-sm-4">Ik ben niet aanhankelijk als ik dronken ben</label> 
+          <div class="col-8">
+            <div class="custom-control custom-radio custom-control-inline">
+              <input name="quiz4" id="quiz4_0" type="radio" class="custom-control-input" value="oneens"> 
+              <label for="quiz4_0" class="custom-control-label">Oneens</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input name="quiz4" id="quiz4_1" type="radio" class="custom-control-input" value="weet niet"> 
+              <label for="quiz4_1" class="custom-control-label">Weet niet</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input name="quiz4" id="quiz4_2" type="radio" class="custom-control-input" value="eens"> 
+              <label for="quiz4_2" class="custom-control-label">Eens</label>
+            </div>
+          </div>
+        </div>
+        <!-- Fotos -->
+        <div class="form-group row">
+          <label class="col-sm-4">Ik ben erg fotogeniek</label> 
+          <div class="col-8">
+            <div class="custom-control custom-radio custom-control-inline">
+              <input name="quiz5" id="quiz5_0" type="radio" class="custom-control-input" value="oneens"> 
+              <label for="quiz5_0" class="custom-control-label">Oneens</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input name="quiz5" id="quiz5_1" type="radio" class="custom-control-input" value="weet niet"> 
+              <label for="quiz5_1" class="custom-control-label">Weet niet</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input name="quiz5" id="quiz5_2" type="radio" class="custom-control-input" value="eens"> 
+              <label for="quiz5_2" class="custom-control-label">Eens</label>
+            </div>
+          </div>
+        </div>
+        <!-- Moe -->
+        <div class="form-group row">
+          <label class="col-sm-4">Ik irriteer mij nooit aan anderen als ik moe ben</label> 
+          <div class="col-8">
+            <div class="custom-control custom-radio custom-control-inline">
+              <input name="quiz6" id="quiz6_0" type="radio" class="custom-control-input" value="oneens"> 
+              <label for="quiz6_0" class="custom-control-label">Oneens</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input name="quiz6" id="quiz6_1" type="radio" class="custom-control-input" value="weet niet"> 
+              <label for="quiz6_1" class="custom-control-label">Weet niet</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input name="quiz6" id="quiz6_2" type="radio" class="custom-control-input" value="eens"> 
+              <label for="quiz6_2" class="custom-control-label">Eens</label>
+            </div>
+          </div>
+        </div> 
+        <!-- Status -->
+        <div class="form-group row">
+          <label class="col-sm-4">Ik val op mensen met status</label> 
+          <div class="col-8">
+            <div class="custom-control custom-radio custom-control-inline">
+              <input name="quiz7" id="quiz7_0" type="radio" class="custom-control-input" value="oneens"> 
+              <label for="quiz7_0" class="custom-control-label">Oneens</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input name="quiz7" id="quiz7_1" type="radio" class="custom-control-input" value="weet niet"> 
+              <label for="quiz7_1" class="custom-control-label">Weet niet</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input name="quiz7" id="quiz7_2" type="radio" class="custom-control-input" value="eens"> 
+              <label for="quiz7_2" class="custom-control-label">Eens</label>
+            </div>
+          </div>
+        </div>
+        <!-- Ik heb status -->
+        <div class="form-group row">
+          <label class="col-sm-4">Ik heb status</label> 
+          <div class="col-8">
+            <div class="custom-control custom-radio custom-control-inline">
+              <input name="quiz8" id="quiz8_0" type="radio" class="custom-control-input" value="oneens"> 
+              <label for="quiz8_0" class="custom-control-label">Oneens</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input name="quiz8" id="quiz8_1" type="radio" class="custom-control-input" value="weet niet"> 
+              <label for="quiz8_1" class="custom-control-label">Weet niet</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input name="quiz8" id="quiz8_2" type="radio" class="custom-control-input" value="eens"> 
+              <label for="quiz8_2" class="custom-control-label">Eens</label>
+            </div>
+          </div>
+        </div>
+        <!-- Heg -->
+        <div class="form-group row">
+          <label class="col-sm-4">Wat vind jij de beste achtergrond voor je foto</label> 
+          <div class="col-8">
+            <div class="custom-control custom-radio custom-control-inline">
+              <input name="quiz9" id="quiz9_0" type="radio" class="custom-control-input" value="zonsondergang"> 
+              <label for="quiz9_0" class="custom-control-label">Zonsondergang</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input name="quiz9" id="quiz9_1" type="radio" class="custom-control-input" value="heg"> 
+              <label for="quiz9_1" class="custom-control-label">Een heg</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input name="quiz9" id="quiz9_2" type="radio" class="custom-control-input" value="monument"> 
+              <label for="quiz9_2" class="custom-control-label">Een monument</label>
+            </div>
+          </div>
+        </div>
+        <!-- Waar drink je het liefst koffie? -->
+        <div class="form-group row">
+          <label class="col-sm-4">Waar drink je het liefst koffie?</label> 
+          <div class="col-8">
+            <div class="custom-control custom-radio custom-control-inline">
+              <input name="quiz10" id="quiz10_0" type="radio" class="custom-control-input" value="thuis"> 
+              <label for="quiz10_0" class="custom-control-label">Thuis</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input name="quiz10" id="quiz10_1" type="radio" class="custom-control-input" value="restaurant"> 
+              <label for="quiz10_1" class="custom-control-label">Een goed restaurant</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input name="quiz10" id="quiz10_2" type="radio" class="custom-control-input" value="starbucks"> 
+              <label for="quiz10_2" class="custom-control-label">Starcbucks</label>
+            </div>
+          </div>
+        </div>
+        <button name="submit" type="submit" class="btn btn-danger btn-lg">Submit</button>
+      </form>
+    </div>
+      
+  </body>
+</html>

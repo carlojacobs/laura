@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Laura Achterberg quiz resultaat</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  </head>
+  <body>
+    <div class="container">
+      <h2><%= result %></h2>
+      <h3><%= percentage %>% match</h3>
+      <img src='/images/<%= gif %>'>
+    </div>
+    <% if (email) { %>
+    <br>
+    <div class="container">
+      <h2>Laat Laura via email weten dat jullie voor elkaar gemaakt zijn!</h2>
+        <form name="naam_form" onsubmit="email()">
+          <input id="name" name="name" type="text" class="form-control" placeholder="Naam">
+          <br>
+          <button name="submit" type="submit" class="btn btn-danger btn-lg">Sla Laura aan de haak!</button>
+        </form>
+    </div>
+    <% } %>
+    <script type="text/javascript">
+      function email() {
+        var name = document.forms["naam_form"]["name"].value;
+        const subject = "Potentiële echtgenoot!";
+        const body = `Hey Laura! Mijn naam is ${name} en wij zijn soulmates!`
+        window.open(`mailto:daantheunissen@reviaandoorn.nl?subject=${subject}&body=${body}`);
+      }
+    </script>
+  </body>
+</html>
