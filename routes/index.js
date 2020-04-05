@@ -10,4 +10,8 @@ router.get('/zoen', (req, res, next) => {
 	res.render('zoen');
 });
 
+router.get('/cijfers', (req, res, next) => {
+	res.render('grades');
+});
+
 module.exports = router;
