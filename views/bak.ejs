@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moet ik een bak trekken?</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <br>
+    <div class="container">
+      <h2>Moet ik een baktrekken?</h2>
+      <form onsubmit="gooi()" name="bak_form">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="kopofmunt" id="kop" value="kop" checked>
+          <label class="form-check-label" for="kop">
+            Kop
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="kopofmunt" id="exampleRadios2" value="munt">
+          <label class="form-check-label" for="munt">
+            Munt
+          </label>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-warning btn-lg">Gooi</button>
+      </form>
+    </div>
+    <script type="text/javascript">
+      function gooi() {
+        var form = document.forms["bak_form"];
+        var kopofmunt = form["kopofmunt"].value;
+        var random = Math.random();
+        console.log(random);
+        if (random < 0.5 && kopofmunt == "kop") {
+          alert("Kop! Je hoeft geen bak te trekken.");
+        } else if (random >= 0.5 && kopofmunt == "munt") {
+          alert("Munt! Je hoeft geen bak te trekken.");
+        } else {
+          if (random < 0.5) {
+            alert("Kop! Je moet een bak trekken!");
+          } else {
+            alert("Munt! Je moet een bak trekken!");
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -14,4 +14,8 @@ router.get('/cijfers', (req, res, next) => {
 	res.render('grades');
 });
 
+router.get('/bak', (req, res, next) => {
+	res.render('bak');
+});
+
 module.exports = router;
