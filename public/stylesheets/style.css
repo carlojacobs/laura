@@ -10,7 +10,7 @@ body {
     max-height: 100vh;
     margin: auto;
     */
-    display: none;
-	width: 100%;
-	height: auto;
+    display: none !important;
+	width: 100% !important;
+	height: auto !important;
 }
