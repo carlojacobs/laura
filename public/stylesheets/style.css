@@ -1,16 +1,15 @@
 body {
     padding-bottom: 2em;
 }
-.imgbox {
+/*.imgbox {
     display: grid;
     height: 100%;
-}
+}*/
 .center-fit {
     /*max-width: 100%;
     max-height: 100vh;
     margin: auto;
     */
-    display: none !important;
 	width: 100% !important;
 	height: auto !important;
 }
