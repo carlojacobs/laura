@@ -9,7 +9,7 @@
     <br>
     <div class="container">
       <h2>Moet ik een baktrekken?</h2>
-      <form onsubmit="gooi()" name="bak_form">
+      <form name="bak_form">
         <div class="form-check">
           <input class="form-check-input" type="radio" name="kopofmunt" id="kop" value="kop" checked>
           <label class="form-check-label" for="kop">
@@ -23,24 +23,28 @@
           </label>
         </div>
         <br>
-        <button type="submit" class="btn btn-warning btn-lg">Gooi</button>
+        <button type="button" onclick="gooi()" class="btn btn-warning btn-lg">Gooi</button>
       </form>
+      <h1 id="result"></h1>
     </div>
     <script type="text/javascript">
+	function changeResultH1(message) {
+		document.getElementById("result").innerHTML = message;
+	}
       function gooi() {
         var form = document.forms["bak_form"];
         var kopofmunt = form["kopofmunt"].value;
         var random = Math.random();
         console.log(random);
         if (random < 0.5 && kopofmunt == "kop") {
-          alert("Kop! Je hoeft geen bak te trekken.");
+          changeResultH1("Kop! Je hoeft geen bak te trekken.");
         } else if (random >= 0.5 && kopofmunt == "munt") {
-          alert("Munt! Je hoeft geen bak te trekken.");
+          changeResultH1("Munt! Je hoeft geen bak te trekken.");
         } else {
           if (random < 0.5) {
-            alert("Kop! Je moet een bak trekken!");
+            changeResultH1("Kop! Je moet een bak trekken!");
           } else {
-            alert("Munt! Je moet een bak trekken!");
+            changeResultH1("Munt! Je moet een bak trekken!");
           }
         }
       }
