@@ -38,7 +38,6 @@ const insertMemeIntoDB = (req, res, next) => {
 
 const showMemes = (req, res, next) => {
 	var memes = req.body.memes;
-	console.log(memes);
 	res.render('memes', {memes});
 }
 

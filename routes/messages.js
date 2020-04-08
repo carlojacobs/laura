@@ -11,7 +11,6 @@ const getAllMessages = (req, res, next) => {
 		for (var i = messages.length - 1; i >= 0; i--) {
 			var dateTime = messages[i]["date_added"].toString();
 			var dateArray = dateTime.split(/[- :]/);
-			console.log(dateArray, dateTime);
 			var dateString = `${dateArray[0]} ${dateArray[1]} ${dateArray[2]} ${dateArray[3]} ${dateArray[4]}:${dateArray[5]}`;
 			messages[i]["date_added"] = dateString;
 		}
@@ -32,7 +31,6 @@ const validate = (req, res, next) => {
 }
 
 const addMessage = (req, res, next) => {
-	console.log("add");
 	const name = req.body.name;
 	const message = req.body.message;
 	const sql = `INSERT INTO Messages (full_name, message) VALUES ("${name}", "${message}");`
