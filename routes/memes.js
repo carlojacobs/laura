@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var multer  = require('multer');
+
 const con = require('../db');
 
 var storage = multer.diskStorage({
@@ -35,12 +36,15 @@ const insertMemeIntoDB = (req, res, next) => {
 	});
 }
 
-router.post('/upload', upload.single('meme'), insertMemeIntoDB);
+const showMemes = (req, res, next) => {
+	var memes = req.body.memes;
+	res.render('memes', {memes});
+}
+
+router.post('/upload', upload.single('meme'), insertMemeIntoDB, getAllMemes, showMemes);
 
 /* GET home page. */
-router.get('/', getAllMemes, (req, res, next) => {
-  res.render('memes', {memes: req.body.memes});
-});
+router.get('/', getAllMemes, showMemes);
 
 
 module.exports = router;
