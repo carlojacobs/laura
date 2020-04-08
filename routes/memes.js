@@ -1,8 +1,18 @@
 var express = require('express');
 var router = express.Router();
 var multer  = require('multer');
-var upload = multer({ dest: '/var/www/data/memes' });
 const con = require('../db');
+
+var storage = multer.diskStorage({
+	destination: function (req, file, cb) {
+		cb(null, '/var/www/data/memes')
+	},
+	filename: function (req, file, cb) {
+		cb(null, file.originalname); // modified here  or user file.mimetype
+	}
+})
+
+var upload = multer({ storage: storage })
 
 const getAllMemes = (req, res, next) => {
 	const sql = "SELECT * FROM Memes;";
