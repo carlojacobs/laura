@@ -13,7 +13,9 @@
       <hr>
       <ul class="list-group">
         <% memes.forEach((meme) => { %>
-          <li class="list-group-item"><img src="http://83.128.192.220/data/memes/<%=meme.name%>" alt=""></li>
+          <div class="imgbox">
+            <li class="list-group-item center-fit"><img src="http://83.128.192.220/data/memes/<%=meme.name%>"></li>          
+          </div>
         <% }); %>
       </ul>
     </div>
