@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var multer  = require('multer');
-var upload = multer({ dest: '~/var/www/data/memes' });
+var upload = multer({ dest: '/var/www/data/memes' });
 const con = require('../db');
 
 const getAllMemes = (req, res, next) => {
