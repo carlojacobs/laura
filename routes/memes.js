@@ -25,11 +25,17 @@ const getAllMemes = (req, res, next) => {
 	});
 }
 
-const uploadMeme = (req, res, next) => {
-	console.log(req.file);
+const insertMemeIntoDB = (req, res, next) => {
+	const name = req.file.originalname;
+	const dir = "/var/www/data/memes/" + name;
+	const sql = `INSERT INTO Memes (name, img_dir) VALUES ("${name}", "${dir}");`
+	con.query(sql, (err, result) => {
+		if (err) throw err;
+		next();
+	});
 }
 
-router.post('/upload', upload.single('meme'), uploadMeme);
+router.post('/upload', upload.single('meme'), insertMemeIntoDB);
 
 /* GET home page. */
 router.get('/', getAllMemes, (req, res, next) => {
